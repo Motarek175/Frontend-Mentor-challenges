@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.accordion {
+  margin: 150px auto;
+  background-color: white;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.faqs {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.accordion-content header:hover {
+  cursor: pointer;
+}
+
+.accordion img {
+  padding: 20px;
+}
+
+.accordion h1 {
+  font-size: 60px;
+}
+
+.accordion-content {
+  padding: 20px 40px;
+}
+
+.accordion-content header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content p {
+  width: 550px;
+  opacity: 0.5;
+  color: hsl(292, 42%, 14%);
+  font-size: 16px;
+  display: none;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 612px) {
+  .accordion-content p {
+    width: 300px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 412px) {
+  .accordion img {
+    padding: 0px;
+    font-size: 30px;
+  }
+  .accordion h1 {
+    font-size: 30px;
+  }
+
+  .accordion-content {
+    padding: 10px 20px;
+  }
+
+  .accordion-content p {
+    width: 200px;
+    padding-top: 30px;
+  }
+}
