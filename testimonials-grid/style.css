@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --fonti: "Barlow Semi Condensed", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 1150px;
+}
+
+.daniel {
+  background-color: var(--Moderateviolet);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0;
+  border-radius: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.jonathan {
+  background-color: var(--Verydarkgrayishblue);
+  border-radius: 10px;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.jeanette {
+  background-color: white;
+  border-radius: 10px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.patrick {
+  background-color: var(--Verydarkblackishblue);
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 10px;
+}
+
+.kira {
+  background-color: white;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-radius: 10px;
+}
+
+.info {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.tit h5 {
+  color: white;
+}
+
+.tit p {
+  color: white;
+  opacity: 0.5;
+}
+
+.tit1 p {
+  color: black;
+  opacity: 0.5;
+}
+
+.desc,
+.desc1 {
+  padding: 20px;
+  gap: 10px;
+}
+
+.desc h3 {
+  color: white;
+  padding: 0 0 20px 0;
+}
+
+.desc1 h3 {
+  color: black;
+  padding: 0 0 20px 0;
+}
+
+.desc p {
+  color: white;
+  opacity: 0.7;
+}
+
+@media (max-width: 512px) {
+  .grid {
+    margin-top: 20px;
+    grid-template-columns: repeat(1, minmax(50%, 1fr));
+    grid-template-rows: repeat(auto, auto);
+  }
+  .daniel,
+  .jonathan,
+  .patrick,
+  .jeanette,
+  .kira {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
