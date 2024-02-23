@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
+  width: 300px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.info {
+  background-color: white;
+  width: 320px;
+  height: 450px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .img {
+    width: fit-content;
+    height: 200px;
+    text-align: center;
+  }
+  .img img {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .info {
+    background-color: white;
+    width: 300px;
+    height: fit-content;
+  }
+}
+
+.info span:first-child {
+  display: block;
+  padding: 20px 40px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.info h1 {
+  padding: 0 40px 30px;
+  font-family: "Fraunces", serif;
+}
+
+.info p {
+  padding: 0 40px 30px;
+  opacity: 0.5;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+}
+
+.info h2 {
+  font-family: "Fraunces", serif;
+  display: inline;
+  padding: 0 0 20px 40px;
+  color: hsl(158, 36%, 37%);
+  font-size: 30px;
+}
+
+.info span {
+  opacity: 0.5;
+  color: hsl(228, 12%, 48%);
+  padding: 0 0 30px 10px;
+}
+
+.info .cart {
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 0px;
+  margin: 20px 40px;
+}
+
+.info .cart i {
+  color: white;
+  padding-left: 40px;
+}
+
+.info .cart p {
+  color: white;
+  display: inline;
+  opacity: 1;
+  padding-left: 10px;
+  font-weight: 700;
+}

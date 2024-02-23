@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(257, 40%, 49%);
+  min-height: 100vh;
+}
+
+.logo {
+  padding: 20px 80px;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.landing img {
+  width: 650px;
+}
+
+.text {
+  width: fit-content;
+  margin: 0 0 0 40px;
+}
+
+.text h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  width: 500px;
+  line-height: 1.6;
+  padding: 20px 0;
+}
+
+.text p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  width: 430px;
+  margin-bottom: 20px;
+}
+
+.text button {
+  color: hsl(257, 40%, 49%);
+  padding: 15px 60px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 3px 5px black;
+  cursor: pointer;
+}
+
+.text button:hover {
+  color: white;
+  background-color: hsl(300, 69%, 71%);
+}
+
+.icons {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+.icons i {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .landing {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .landing img {
+    width: 400px;
+  }
+
+  .text {
+    margin: 0 0 0 40px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    align-items: center;
+  }
+
+  .text h2 {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .text p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    width: 292px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 20px;
+  }
+
+  .text button {
+    margin-bottom: 100px;
+  }
+
+  .icons {
+    position: relative;
+    margin-left: 125px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    padding: 20px 10px;
+  }
+  .landing img {
+    width: 300px;
+  }
+
+  .text h2 {
+    width: 300px;
+    font-size: 25px;
+  }
+  .text p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    width: 292px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 20px;
+  }
+}
+.icons i:hover {
+  border: 1px solid hsl(300, 69%, 71%);
+  color: hsl(300, 69%, 71%);
+}

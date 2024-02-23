@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+  --mainbgcolor: hsl(222, 26%, 31%);
+  --mainbg1color: hsl(0, 0%, 90%);
+  --mainbg2color: hsl(268, 75%, 9%);
+  --twotkbg: hsl(0, 5%, 81%);
+  --tbgkbgsbg: hsl(268, 71%, 12%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--mainbgcolor);
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.active1 {
+  background-color: var(--mainbgcolor);
+}
+body.active2 {
+  background-color: var(--mainbg1color);
+}
+body.active3 {
+  background-color: var(--mainbg2color);
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.nav .title h3 {
+  color: white;
+  margin-top: 35px;
+}
+
+body.active2 .nav .title h3 {
+  color: black;
+}
+
+.nav .toggle .num {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav .toggle .num p {
+  color: white;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+body.active2 .nav .toggle .num p,
+body.active2 .nav .toggle .theme p {
+  color: black;
+}
+
+body.active3 .nav .toggle .num p,
+body.active3 .nav .toggle .theme p,
+body.active3 .nav .title h3,
+body.active3 .screen input {
+  color: hsl(52, 100%, 62%);
+}
+
+.nav .toggle .theme {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav .toggle .theme p {
+  color: white;
+}
+
+.nav .toggle .theme .box {
+  width: 60px;
+  height: 15px;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-top: 4px;
+  position: relative;
+}
+body.active2 .nav .toggle .theme .box {
+  background-color: #ddd;
+}
+
+.nav .toggle .theme .box #circle {
+  width: 15px;
+  height: 15px;
+  background-color: hsl(6, 63%, 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 30px;
+}
+
+body.active2 .nav .toggle .theme .box #circle {
+  background-color: hsl(25, 98%, 40%);
+}
+body.active3 .nav .toggle .theme .box #circle {
+  background-color: hsl(176, 100%, 44%);
+}
+
+.screen {
+  width: 100%;
+}
+
+.screen input {
+  width: 100%;
+  height: 70px;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: right;
+  font-size: 32px;
+  color: white;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  background-color: hsl(224, 36%, 15%);
+  cursor: default;
+}
+
+body.active2 .screen input {
+  background-color: white;
+  color: black;
+}
+body.active3 .screen input {
+  background-color: var(--tbgkbgsbg);
+}
+
+.body .btn {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: hsl(224, 36%, 15%);
+  padding: 10px 5px;
+  margin: 8px 0;
+  border-radius: 7px;
+  text-align: center;
+}
+
+body.active2 .body .btn {
+  background-color: var(--twotkbg);
+}
+body.active3 .body .btn {
+  background-color: var(--tbgkbgsbg);
+}
+
+.body .btn button {
+  background-color: white;
+  width: 90px;
+  padding: 15px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 10px 10px;
+  font-size: 32px;
+}
+
+body.active2 .body .btn button {
+  box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+  background-color: var(--mainbg1color);
+}
+body.active3 .body .btn button {
+  box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+  background-color: hsl(268, 47%, 21%);
+  color: hsl(52, 100%, 62%);
+}
+
+.body .btn button.del {
+  background-color: hsl(225, 21%, 49%);
+  color: white;
+  font-size: 16px;
+}
+
+body.active2 .body .btn button.del,
+body.active2 .body .btn button.reset {
+  background-color: hsl(185, 42%, 37%);
+}
+
+body.active3 .body .btn button.del,
+body.active3 .body .btn button.reset {
+  box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+  background-color: hsl(268, 47%, 21%);
+  color: #fff;
+}
+
+.body .btn button.reset {
+  color: white;
+  width: 200px;
+  font-size: 16px;
+  background-color: hsl(225, 21%, 49%);
+}
+
+.body .btn button.equal {
+  color: white;
+  width: 200px;
+  font-size: 16px;
+  background-color: hsl(6, 63%, 50%);
+}
+
+body.active2 .body .btn button.equal {
+  color: black;
+}
+
+body.active3 .body .btn button.equal {
+  box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+  background-color: hsl(176, 100%, 44%);
+  color: #fff;
+}
+
+@media (max-width: 435px) {
+  .body {
+    width: fit-content;
+    justify-content: center;
+    margin-left: 20px;
+  }
+
+  .nav {
+    justify-content: space-around;
+  }
+
+  .nav .toggle .num p {
+    margin: 5px 2px;
+  }
+
+  .nav .toggle .theme .box {
+    width: 50px;
+    height: 15px;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+
+  .body .btn {
+    max-width: 100%;
+    width: 90%;
+    justify-content: center;
+  }
+  .screen {
+    width: 85%;
+    margin-left: 20px;
+  }
+
+  .body .btn button {
+    font-size: 24px;
+    padding: 10px;
+    margin: 5px 5px;
+    width: 70px;
+  }
+
+  .body .btn button.reset,
+  .body .btn button.equal {
+    width: 45%;
+  }
+}
+
+@media (max-width: 387px) {
+  .screen {
+    margin-left: 20px;
+    width: 310px;
+  }
+
+  .body {
+    width: fit-content;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  .body .btn button {
+    font-size: 24px;
+    padding: 10px;
+    margin: 5px 5px;
+    width: 60px;
+  }
+  .body .btn button.reset,
+  .body .btn button.equal {
+    width: 45%;
+    font-size: 16px;
+  }
+}
